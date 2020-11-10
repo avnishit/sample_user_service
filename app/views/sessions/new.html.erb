@@ -1,0 +1,14 @@
+<section class="section">
+    <div class="container">
+    <h1>Sessions#signin</h1>
+    <%= form_tag '/signin' do %>
+    <%= label_tag :username%>
+    <%= text_field_tag :username %>
+    <%= label_tag :password%>
+    <%= password_field_tag :password%>
+    <%= submit_tag "Signin"%>
+ <%end%>
+    </div>
+  </section>
+
+

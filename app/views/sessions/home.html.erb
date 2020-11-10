@@ -1,0 +1,40 @@
+
+  <section class="section">
+    <div class="container">
+      <h1 class="title">App Home</h1>
+      <h2 class="subtitle">
+      <% if logged_in? %>
+      <h1>Welcome Home, <%= current_user.first_name %></h1>
+      <table class="table">
+      <tbody>
+      <tr>
+      <th>User Details</th>
+      <th>User Id</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Created At</th>
+      <th>Updated At</th>
+    </tr>
+      <tr>
+      <th></th>
+      <th><%= current_user.id %></th>
+      <th><%= current_user.first_name %></th>
+      <th><%= current_user.last_name %></th>
+      <th><%= current_user.email %></th>
+      <th><%= current_user.created_at %></th>
+      <th><%= current_user.updated_at %></th>
+    </tr>
+      </tbody>
+      </table>
+
+      <%= button_to "SignOut", '/signout', method: :post%>
+  <% else %>
+      <h1>You are not signed In</h1>
+      <%= button_to "SignIn", '/signin', method: :get%>
+  <%end%>
+      </h2>
+    </div>
+  </section>
+
+
