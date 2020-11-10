@@ -7,3 +7,4 @@
 rails db:migrate
 rails server
 ```
+* Postman Collection: https://www.getpostman.com/collections/41af8b1264615f60375e 
